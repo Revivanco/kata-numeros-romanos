@@ -12,27 +12,26 @@ const romanNumbers = [
     [5, "V"],
     [4, "IV"],
     [1, "I"]
-  ];
+];
+const mergeStrings = (string1, string2) => `${string1}${string2}`
 
-  let uno = 1
-  let tresNueve = 3999
-  
-  const romanMachine = (number) => {
-   let  romanResult = ""
-   for(let i = 0; i < romanNumbers.length ;i++){
-        console.log(romanNumbers[i])
-        console.log(romanNumbers[i][0])
+const romanMachine = (number) => {
+    let romanResult = ""
+    for (let i = 0; i < romanNumbers.length; i++) {
         const romanArray = romanNumbers[i]
-        console.log("mi arreglo interno es")
         console.log(romanArray)
-        console.log("y su indice 0 es")
-        console.log(romanArray[0])
+        if (number >= romanArray[0]) {
+            let index1 = romanArray[1]
+            romanResult = mergeStrings(index1, romanResult)
+
+        }
+    };
+
+    return romanResult
+
+};
 
 
-        
-   }
-        
-      return romanResult
-  };
-  
-romanMachine()
+romanMachine(31)
+console.log(romanMachine(31))
+
