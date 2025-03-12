@@ -25,3 +25,11 @@ while(y >= m){
     y -= m 
 console.log("y es mayoooorrr jejeje")
 }
+
+
+let cucarachas = ["cucaracha", "cucaracha", "cucaracha", "cucaracha"]
+
+while(cucarachas.length > 0){
+cucarachas.pop()
+console.log(cucarachas)
+}
